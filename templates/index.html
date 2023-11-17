@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../static/IMG/Icon.ico">
+    <title>T - Rex</title>
+    <link rel="stylesheet" href="../static/Style.css">
+</head>
+
+<body>
+    <video autoplay muted loop id="video-bg">
+        <source src="../static/IMG/index.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de videos.
+    </video>
+    
+    <div class="FloatMenu">
+        <button id="menu-button" class="menu-btn">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </button>
+        
+        <nav id="menu" class="menu">
+            <ul>
+            
+                    <li><a href="{{ url_for('acerca_de') }}"><b>Acerca De</b></a></li>
+                    <li><a href="{{ url_for('registro') }}"><b>Registro</b></a></li>   
+                
+            </ul>
+        </nav>
+    </div>
+    <div class="PantallaUno">
+        <img src="../static/IMG/lOGO.png" alt="TherapistLogo" class="Logo">
+
+        <div class="Login">
+            <form action="/login" method="post">
+                <div class="loginMail">
+                    <label for="logMail" class="label-correo">Correo</label>
+                    <input type="text" id="logMail" name="logMail" class="MailLog">
+                </div>
+                <div class="loginPass">
+                    <label for="lopython DataBase.pygPass" class="label-contrasena">Contraseña</label>
+                    <input type="password" id="logPass" name="logPass" class="PassLog">
+                </div>
+                <div class="buttonLogin">
+                    <button type="submit" class="btnLogear">Ingresar</button>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+
+    <div class="PantallaDos">
+        <div class="imgUno">
+            <img src="../static/IMG/indeximg2.png" class="imgSlogan">
+        </div>
+        <div class="SloganUno">
+            <p><span class="ChangeColor">¡Únete a la dino-fiesta!</span> y cuida de tu bienestar mental.</p>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div class="copy"></div>
+    <p>&copy; 2023 Miguel Ghash. Todos los derechos reservados.</p>
+</footer>
+<script src="../static/script.js"></script>
+
+</html>

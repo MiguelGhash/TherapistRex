@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de therapist rex</title>
+    <link rel="stylesheet" href="../static/PacienteStyle.css">
+    <link rel="icon" type="image/x-icon" href="../static/IMG/Icon.ico">
+</head>
+
+
+    <body>
+        <div class = "Menu">
+             <nav id="menu" class="menu">
+                <ul>
+                    <li><a href="index.html"><b>Cerrar Sesión</b></a></li>
+                    <li><a href="#"><b>Editar Perfil</b></a></li>
+                    <li><a href="#"><b>Soporte</b></a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1>Bienvenido, <b class="NombreUs" name="NombreUs">Nombre</b></h1>
+        <section class="fila">
+        <article class="columna">
+        <div>
+            <img class="fotografia" src="../static/IMG/craiyon_224620_black_T_rex_silhouette_for_a_modern_profile_image.png" alt="Fotografia" />
+          </div>
+          <h3>MIS DATOS</h3>
+          <div class="datitos">
+            <h4 class="Correo" name="Correo">Correo@correo.com</h4>
+            <h4 class="Ciudad" name="Ciudad">Ciudad</h4>
+            <div class="distancia">
+                <h4 name="Telefono" class="Telefono">Telefono</h4>
+                <div class="RedirWhatsapp">
+                    <a href="https://wa.me/tunumerodetelefono" target="_blank">
+                        <img class="Celular" src="../static/IMG/WhatsApp.svg.png" alt="Fotografia" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </article>
+    <article class="columna">
+        <h3>Buscar terapia por:</h3>
+        <article class="fila">
+            <div><select id="tipoUsuario" class="tipoUsuario">
+                <option value="opcion1">Nombre terapia</option>
+                <option value="opcion2">Ciudad</option>
+                <option value="opcion3">Terapeuta</option>
+            </select></div>
+    <div class = "txtFieldd">
+        <input type="text" id="txtBuscar" class="txtField">
+        <button id="btnBuscar" class="btnBusqueda">Buscar</button>
+
+    </div>
+        </article>
+        
+    </article>
+    </section>
+    </body>
+
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="../static/jqueryProfile.js"></script>
+
+
+</html>

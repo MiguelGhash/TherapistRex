@@ -1,0 +1,521 @@
+/*Menú desplegable*/
+  
+.menu {
+	position: fixed;
+	margin-top: 0vw;
+	width: 0;
+	overflow: hidden;
+	background: #511389;
+	box-shadow: 0 0 10px rgb(0, 0, 0), 0, .3;
+	transition: width 0.5s ease-in-out;
+	border-radius: 15px;
+	height: 5vw;
+	font-size: 0;
+	opacity: 90%;
+	z-index: 10;
+	left: 16%; 
+	top: 5%; 
+}
+
+.menu.active {
+	opacity: 90%;
+	width: 70vw;
+	font-size: 1.3vw;
+	color: #fff;
+}
+
+.menu::after {
+	content: "";
+	position: absolute; /* Asegura que la posición sea absoluta */
+	bottom: -0.5vw;
+	right: 7%;
+	transform: translateX(10%);
+	width: 10vw;
+	height: 90%;
+	margin-top: 4vw;
+}
+
+  
+  .menu a {
+	opacity: 230%;
+	display: block;
+	padding: 1.5vw 5vw;
+	color: #f0f0f0;
+	text-decoration: none;
+	border-right: 0.1vw transparent #974747;
+   transition: all 0.3s ease
+  }
+  
+  .menu a:last-child {
+	border-right: none;
+  }
+  
+  .menu a:hover {
+	background: #ebddddfd;
+	opacity: 50%;
+	color: #ffffff;
+	height: 5vw;
+	border-radius: 1vw;
+	transition: all 0.5s ease-in-out;
+	
+	
+  }
+  
+  .menu.active a:hover {
+	color: #511389;
+	opacity: 70%;
+
+  }
+  
+  .menu.active a {
+	color: #ffffff;
+	opacity: 300%;
+  }
+  
+  .menu ul {
+	opacity: 230%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	height: 5vw;
+  }
+  
+  .menu li {
+	margin: 0;
+	margin-bottom: 2px;
+  }
+  
+
+  .menu-btn {
+	position: fixed;
+	z-index: 3;
+	font-size: 2vw;
+	color: #511389;
+	background-color: #0000001f;;
+	border: none;
+	cursor: pointer;
+	height: 4vw;
+	width: 4vw;
+	margin-top: 2.5vw;
+	margin-left: 10%;
+	border-radius: 1vw;
+	padding: 0.5vw;
+
+  }
+  
+  
+  .menu-btn .line {
+	width: 100%;
+	height: 0.4vw;
+	background-color: #511389;
+	margin-bottom: 0.3vw;
+	margin-top: 0.4vw;
+	transition: all 0.3s ease;
+  }
+  
+  .menu-btn:hover .line:nth-child(1),
+  .menu-btn:hover .line:nth-child(3) {
+	width: 100%;
+  }
+  
+  .menu-btn .line:nth-child(1),
+  .menu-btn .line:nth-child(3) {
+	width: 50%;
+  }
+  
+  .menu-btn:hover .line:nth-child(2) {
+	width: 50%;
+  }
+  
+  /* Cambiar botón a x */
+  .menu-btn.active .line:nth-child(1) {
+	transform: rotate(45deg);
+	width: 100%;
+	margin-bottom: -0.9vw;
+	margin-top: 1.5vw;
+  }
+  
+  .menu-btn.active .line:nth-child(2) {
+	transform: rotate(-45deg);
+	width: 100%;
+	margin-top: 0.5vw;
+  }
+  
+  .menu-btn.active .line:nth-child(3) {
+	opacity: 0;
+  }
+  /*Text input*/
+
+.menu {
+	position: fixed;
+	margin-top: 0vw;
+	width: 0;
+	overflow: hidden;
+	background: #511389;
+	box-shadow: 0 0 10px rgb(0, 0, 0), 0, .3;
+	transition: width 0.5s ease-in-out;
+	border-radius: 15px;
+	height: 5vw;
+	font-size: 0;
+	opacity: 90%;
+	z-index: 10;
+	left: 16%; 
+	top: 5%; 
+}
+
+.menu.active {
+	opacity: 90%;
+	width: 70vw;
+	font-size: 1.3vw;
+	color: #fff;
+}
+
+.menu::after {
+	content: "";
+	position: absolute; /* Asegura que la posición sea absoluta */
+	bottom: -0.5vw;
+	right: 7%;
+	transform: translateX(10%);
+	width: 10vw;
+	height: 90%;
+	margin-top: 4vw;
+}
+
+  
+  .menu a {
+	opacity: 230%;
+	display: block;
+	padding: 1.5vw 5vw;
+	color: #f0f0f0;
+	text-decoration: none;
+	border-right: 0.1vw transparent #974747;
+   transition: all 0.3s ease
+  }
+  
+  .menu a:last-child {
+	border-right: none;
+  }
+  
+  .menu a:hover {
+	background: #ebddddfd;
+	opacity: 50%;
+	color: #ffffff;
+	height: 5vw;
+	border-radius: 1vw;
+	transition: all 0.5s ease-in-out;
+	
+	
+  }
+  
+  .menu.active a:hover {
+	color: #511389;
+	opacity: 70%;
+
+  }
+  
+  .menu.active a {
+	color: #ffffff;
+	opacity: 300%;
+  }
+  
+  .menu ul {
+	opacity: 230%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	height: 5vw;
+  }
+  
+  .menu li {
+	margin: 0;
+	margin-bottom: 2px;
+  }
+  
+
+  .menu-btn {
+	position: fixed;
+	z-index: 3;
+	font-size: 2vw;
+	color: #511389;
+	background-color: #0000001f;;
+	border: none;
+	cursor: pointer;
+	height: 4vw;
+	width: 4vw;
+	margin-top: 2.5vw;
+	margin-left: 10%;
+	border-radius: 1vw;
+	padding: 0.5vw;
+
+  }
+  
+  
+  .menu-btn .line {
+	width: 100%;
+	height: 0.4vw;
+	background-color: #511389;
+	margin-bottom: 0.3vw;
+	margin-top: 0.4vw;
+	transition: all 0.3s ease;
+  }
+  
+  .menu-btn:hover .line:nth-child(1),
+  .menu-btn:hover .line:nth-child(3) {
+	width: 100%;
+  }
+  
+  .menu-btn .line:nth-child(1),
+  .menu-btn .line:nth-child(3) {
+	width: 50%;
+  }
+  
+  .menu-btn:hover .line:nth-child(2) {
+	width: 50%;
+  }
+  
+  /* Cambiar botón a x */
+  .menu-btn.active .line:nth-child(1) {
+	transform: rotate(45deg);
+	width: 100%;
+	margin-bottom: -0.9vw;
+	margin-top: 1.5vw;
+  }
+  
+  .menu-btn.active .line:nth-child(2) {
+	transform: rotate(-45deg);
+	width: 100%;
+	margin-top: 0.5vw;
+  }
+  
+  .menu-btn.active .line:nth-child(3) {
+	opacity: 0;
+  }
+
+
+  body {
+    transition: all 0.3s ease;
+    background-color: #00342E;
+    background-image: url('IMG/registro.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh; /* Cambié esto a 100vh para ocupar la altura completa */
+    margin: 0; /* Añadí esto para eliminar el margen por defecto */
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #48256388;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    backdrop-filter: blur(3px);
+}
+
+/**/
+
+
+.tittle {
+    top: 20%;
+    text-align: center;
+    z-index: 1;
+    height: 10vw;
+    padding: 2%;
+    color: white;
+}
+footer {
+    background-color: #302250;
+    color: whitesmoke;
+    font-family: sans-serif;
+    height: 60px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    font-size: 1em;
+    margin: 1px -0.6px; /* Centra horizontalmente */
+    margin-bottom: -20px;
+    margin-top: 100px;
+    z-index: 1;
+ }
+ .personalData{
+    color: white;
+    padding: 2%;
+    background-color: #302250;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+	width: 98.6%;
+	margin-left: -2%;
+	text-align: center;
+ }
+.subDatos
+{
+	display: flex;
+	flex-direction: row;
+}
+ .datosUno, .datosDos{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    background-color: rgb(48, 48, 48);
+    border-radius: 20px;
+ }
+ .txtField{
+background-color:rgb(70, 69, 69) ;
+height: 100%;
+border: none; /* Elimina el borde predeterminado */
+border-radius: 0.5vw;
+color: white;
+
+ }
+ .txtFieldd{
+   margin-top: 10px;
+   margin-bottom: 10px;
+ }
+ .tipoUsuario {
+    background-color: rgb(70, 69, 69);
+    display: inline-block;
+	width: 100%;
+	cursor: pointer;
+  	padding: 7px 10px;
+  	height: 42px;
+  	outline: 0; 
+  	border: 0;
+	border-radius: 0;
+	color: #7b7b7b;
+	font-size: 1em;
+	color: #999;
+	font-family: 
+	'Quicksand', sans-serif;
+	border:2px solid rgba(0,0,0,0.2);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+	margin-top: 30px;
+}
+
+
+
+
+
+ .txtFieldd label 
+ {
+   display: block;
+   text-align: left;
+   opacity: 100;
+   transition: opacity 0.3s;
+   color: white;
+   
+ }
+ .Alert {
+    display: none;
+    color: red;
+    margin-top: 20px; /* Puedes ajustar la distancia según tus necesidades */
+}
+
+.Alert.active {
+    display: block;
+}
+
+ .Registrar {
+	padding: 10px 20px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  .BotonRegistrar
+  {
+	margin-top: 5%;
+  }
+  
+  .Registrar:hover {
+	background-color: #45a049;
+  }
+  
+  .Registrar:active {
+	background-color: #3e8e41;
+  }
+  
+
+  .dataTerapista, .dataPaciente {
+    display: none;
+    transition: display 0.5s;
+}
+
+.dataTerapista.active, .dataPaciente.active {
+    display: flex;
+    flex-direction: row;
+    visibility: visible;
+    background-color: #302250;
+    color: white;
+    padding: 5%;
+    margin-top: 5%; /* Ajusta según sea necesario */
+    transition: ease-in-out 0.5s;
+    z-index: 1;
+    width: 92.6%;
+    margin-left: -2%;
+}
+
+
+.DescripTerap{
+	background-color:rgb(70, 69, 69) ;
+	height: 100%;
+	border: none; /* Elimina el borde predeterminado */
+	border-radius: 0.5vw;
+	color: white;
+	margin-bottom: 5%;
+	
+}
+ /* Oculta DatosUsuario por defecto */
+.DescribirTerapia{
+	padding: 5%;
+	margin-bottom: 5%;
+}
+/* Agrega este estilo al final de tu archivo registerStyle.css */
+.modal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

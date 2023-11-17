@@ -1,0 +1,48 @@
+.menu a {
+	opacity: 230%;
+	display: block;
+	padding: 1.5vw 5vw;
+	color: white;
+	text-decoration: none;
+	border-right: 0.1vw transparent #974747;
+   transition: all 0.3s ease
+  }
+  
+  .menu ul {
+	opacity: 230%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	height: 5vw;
+  }
+  .centrar{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+body{
+    background-color: #97BDB4;
+    color: white;
+}
+
+  .terapia {
+    width: 300px;
+    height: 30px;
+    border: none; /* Elimina el borde predeterminado */
+    border-radius: 5px;
+    background-color: #e6e6e6;
+    color: rgb(190, 189, 189);
+    margin-bottom: 20px;
+  }
+
+  .cuadro{
+	background-color:rgb(116, 155, 155) ;
+	height: 500px;
+	width: 1300px;
+	border: none;
+	border-radius: 10px;
+	color: rgb(6, 78, 96);
+	padding: 10px;
+	 }

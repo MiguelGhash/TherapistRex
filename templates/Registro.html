@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de therapist rex</title>
+    <link rel="stylesheet" href="../static/registerStyle.css">
+    <link rel="icon" type="image/x-icon" href="../static/IMG/Icon.ico">
+</head>
+
+<body>
+    <div class="FloatMenu">
+        <button id="menu-button" class="menu-btn">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </button>
+        
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="{{ url_for('acerca_de') }}"><b>Acerca De</b></a></li>
+                <li><a href="{{ url_for('index') }}"><b>Inicio</b></a></li>
+                <li><a href="#"><b>boton3</b></a></li>
+                <li><a href="#"> <b>Hola</b></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="tittle">
+        <h1 class="pgTittle">¡ÚNETE A LA DINO-FIESTA!</h1>
+    </div>
+
+    <form id="registro-form" method="post" action="{{ url_for('registro') }}">
+        <div class="personalData">
+            <div class="TituloDatos">
+                <h1>DATOS PERSONALES</h1>
+            </div>
+            <div class="subDatos">
+                <div class="datosUno">
+                    <div class="txtFieldd">
+                        <label for="txtName" class="lbl">Nombre</label>
+                        <input type="text" id="txtName" name="txtName" class="txtField">
+                    </div>
+                    <div class="txtFieldd">
+                        <label for="txtCountry" class="lbl">País</label>
+                        <input type="text" id="txtCountry" name="txtCountry" class="txtField">
+                    </div>
+                    <div class="txtFieldd">
+                        <label for="txtMail" class="lbl">Correo</label>
+                        <input type="text" id="txtMail" name="txtMail" class="txtField">
+                    </div>
+                    <div class="Alert">
+                        <label for="txtAlert" class="lblAlert">Ese correo ya existe</label>
+                    </div>
+                </div>
+                <div class="datosDos">
+                    <div class="txtFieldd">
+                        <label for="txtPass" class="lbl">Elige una contraseña</label>
+                        <input type="password" id="txtPass" name="txtPass" class="txtField">
+                    </div>
+                    <div>
+                        <select id="tipoUsuario" class="tipoUsuario">
+                            <option value="opcion1">Tipo de usuario</option>
+                            <option value="Terap">Terapisaurio</option>
+                            <option value="Paciente">PAciente Rex</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dataTerapista">
+            <div class = "datosUno">
+                <div class = "txtFieldd">
+                    <label for="txtCel" class="lbl">Celular</label>
+                    <input type="tel" id="txtCel" name = "txtCel" class="txtField" pattern="[0-9]+" title="Ingrese un número de teléfono válido (solo números)">
+                    
+                </div>
+                <div class = "txtFieldd">
+                    <label for="txtTerap" class="lbl">Terapia que ofreces</label>
+                    <input type="text" id="txtTerap" name ="txtTerap" class="txtField">
+                   </div>
+              
+              
+         
+         
+             </div>
+             <div class = "datosDos">
+                  <div class = "DescribirTerapia">
+                    <label for="descripcion">Descripción de la terapia:</label>
+                          <br>
+                        <textarea id="descripcion" class = "DescripTerap" name="descripcion" rows="6" cols="40"></textarea>
+                    </div>
+                   
+                        <!-- ... Otros campos del formulario ... -->
+                        <div class="BotonRegistrar">
+                            <button id="Registrar" class="Registrar" type="submit">Registrar</button>
+                        </div>
+                  
+                    
+             </div>
+        </div>
+
+        <div class="dataPaciente">
+            <div class="datosUno">
+                <div class="txtFieldd">
+                    <label for="txtCel" class="lbl">Celular</label>
+                    <input type="tel" id="txtCel" class="txtField" pattern="[0-9]+" title="Ingrese un número de teléfono válido (solo números)">
+                </div>
+                <div class="txtFieldd">
+                    <label for="txtTrastorn" class="lbl">¿Qué trastorno tienes? Si no tienes diagnóstico, pon NA</label>
+                    <input type="text" id="txtTrastorn" class="txtField">
+                </div>
+                <div class="BotonRegistrar">
+                    <button id="Registrar" class="Registrar" type="submit">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <footer>
+        <div class="copy"></div>
+        <p>&copy; 2023 Miguel Ghash. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../static/script.js"></script>
+    <script src="../static/js2.js"></script>
+    <script src="../static/jquery.js"></script>
+</body>
+<!-- Agrega este div al final de tu archivo Registro.html -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Por favor, rellena todos los campos.</p>
+    </div>
+</div>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapist Rex</title>
+    <link rel="stylesheet" href="../static/terapeutaStyle.css">
+    <link rel="icon" type="image/x-icon" href="../static/IMG/Icon.ico">
+</head>
+
+<body>
+
+    <div id="formularioTerapia" class="formulario-container">
+        <div class="formulario-flotante">
+            <h2>Agregar Terapia</h2>
+            <form id="formTerapia">
+                <div class="AddTerapForm">
+                    <label for="nombreTerapia">Nombre de la terapia:</label>
+                    <input type="text" id="nombreTerapia" name="nombreTerapia" required>
+    
+                    <label for="descripcionTerapia">Descripción:</label>
+                    <textarea id="descripcionTerapia" name="descripcionTerapia" required></textarea>
+    
+                    <label for="descripcionSobreMi">Descripción sobre mí:</label>
+                    <textarea id="descripcionSobreMi" name="descripcionSobreMi" required></textarea>
+    
+                    <input type="submit" value="Agregar Terapia">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="Menu">
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="{{ url_for('index') }}"><b>Cerrar Sesión</b></a></li>
+                <li><a href="#"><b>Editar Perfil</b></a></li>
+                <li><a href="#"><b>Soporte</b></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h1>Bienvenido, <b class="NombreUs" name="NombreUs">Nombre</b></h1>
+
+    <section class="fila">
+        <article class="columna">
+            <div>
+                <img class="fotografia" name="ProfilePic" src="../static/IMG/craiyon_224620_black_T_rex_silhouette_for_a_modern_profile_image.png" alt="Fotografia" />
+            </div>
+            <h3>MIS DATOS</h3>
+            <div class="datitos">
+                <h4 class="Correo" name="Correo">Correo@correo.com</h4>
+                <h4 class="Ciudad" name="Ciudad">Ciudad</h4>
+                <div class="distancia">
+                    <h4 name="Telefono" class="Telefono">Telefono</h4>
+                    <div class="RedirWhatsapp">
+                        <a href="https://wa.me/tunumerodetelefono" target="_blank">
+                            <img class="Celular" src="../static/IMG/WhatsApp.svg.png" alt="Fotografia" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="columna">
+            <h2>TERAPIAS QUE OFRECES:</h2>
+            <div id="cuadro" class="cuadro">
+                <div id ="TerapiaData" class = "TerapiaData">
+                    
+                </div>
+            </div>
+            <div>
+                <button id="btnAbrirFormulario" class="boton">AGREGAR TERAPIA</button>
+            </div>
+        </article>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../static/qeryTerapiaTerapeuta.js"></script>
+    <script src="../static/jqueryProfile.js"></script>
+    
+</body>
+</html>

@@ -23,13 +23,16 @@
     <input type="text" id="busqueda" class="terapia" placeholder="Nueva búsqueda"> 
 </div>
 <h1>TERAPIAS DISPONIBLES</h1>
-<div class="cuadro">
-
+<!-- Encontradas -->
+<div class="Encontradas" name="Encontradas" id="Encontradas">
+    {{ resultados_html|safe }}
 </div>
+
 </div>
 </body>
 
 
-<script src="script.js"></script>
-<script src="js2.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="../static/jqueryBuscarTerapias.js"></script>
+<script src="../static/jqueryProfile.js"></script>
 </html>

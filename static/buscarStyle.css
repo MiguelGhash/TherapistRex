@@ -37,7 +37,7 @@ body{
     margin-bottom: 20px;
   }
 
-  .cuadro{
+  .Encontradas{
 	background-color:rgb(116, 155, 155) ;
 	height: 500px;
 	width: 1300px;
@@ -46,3 +46,11 @@ body{
 	color: rgb(6, 78, 96);
 	padding: 10px;
 	 }
+
+   .resultado-terapia{
+    background-color:rgb(13, 75, 70);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1vw;
+   }

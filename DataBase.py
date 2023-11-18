@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request, redirect, jsonify
+from flask import sessions
+
 import firebase_admin
 from firebase_admin import credentials, firestore, exceptions
 import logging
@@ -246,35 +248,69 @@ def get_terapias_terapeuta():
 
     return jsonify({"terapias": terapias_list})
 
-from flask import request
 
 # ... (código existente)
 
 
-from flask import request, jsonify
 
-from flask import request, render_template, jsonify
+resultados = []
+search_term = ""
 
-from flask import request, render_template, jsonify
-
+# Ruta para buscar terapia (POST)
 @app.route('/buscar_terapia', methods=['POST'])
 def buscar_terapia():
+    global resultados
+    global search_term
+
     try:
         # Obtener el término de búsqueda del formulario
         search_term = request.form.get('txtBuscar')
 
-        # Crear una variable global llamada Busqueda y asignarle el valor del término de búsqueda
-        global Busqueda
-        Busqueda = search_term
+        # Realizar la búsqueda en la base de datos
+        terapias_ref = db.collection("TerapiaOf").where("NombreTerapia", "==", search_term).stream()
 
-        # Imprimir la variable global para verificar
-        print("Valor de Busqueda:", Busqueda)
+        # Almacenar los resultados en la variable global
+        resultados = [terapia.to_dict() for terapia in terapias_ref]
 
-        # Renderizar la página BuscarTerapias.html con el contenido actualizado
-        return render_template('BuscarTerapias.html')
+        # Imprimir resultados y término de búsqueda
+        print("Estos son resultados de buscar terapia")
+        print(resultados)
+        print( search_term)
+
+        # Devolver una respuesta
+        return jsonify({"status": "success", "message": "Búsqueda realizada con éxito"})
 
     except Exception as e:
         return jsonify({"status": "error", "message": f"Error al buscar terapia: {str(e)}"})
+# Ruta para mostrar los resultados (GET)
+@app.route('/busqueda_disponibles', methods=['GET'])
+def busqueda_disponibles():
+    global resultados
+    print("Estos son resultados del dispinibles")
+    print(resultados)
+    try:
+        # Crear el HTML para los resultados
+        resultados_html = ""
+        if resultados:
+            for terapia in resultados:
+                resultados_html += f"<div class='resultado-terapia'><p>Nombre terapia: {terapia['NombreTerapia']}</p><p>Descripción terapia: {terapia['Descripcion']}</p><p>Terapeuta: {terapia['Terapeuta']}</p><p>Teléfono: {terapia['Telefono']}</p><p>Correo del terapeuta: {terapia['CorreoTerap']}</p><p>Sobre el terapeuta: {terapia['sobreTerapeuta']}</p></div>"
+
+        else:
+            resultados_html = "<p>No se encontraron terapias.</p>"
+        print(resultados_html)
+        # Devolver los resultados como HTML
+        return jsonify({"resultados_html": resultados_html})
+
+    except Exception as e:
+        return jsonify({"status": "error", "message": f"Error al mostrar resultados: {str(e)}"})
+
+
+@app.route('/redireccionar')
+def redireccionar():
+    return render_template('BuscarTerapias.html')
+
+
+
 
 
 

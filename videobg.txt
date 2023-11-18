@@ -1,8 +1,4 @@
- #video-bg {
-    position: fixed;
-    top: -100vh; /* Puedes ajustar el valor negativo para la posición vertical */
-    left: -100vw; /* Puedes ajustar el valor negativo para la posición horizontal */
-    min-width: -1000vw; /* Ajusta el ancho del video según tu preferencia */
-    min-height: auto; /* Ajusta la altura del video según tu preferencia */
-    z-index: -2; 
-}
+Librerías necesarias de python: 
+flask
+firebase admin
+firebase
